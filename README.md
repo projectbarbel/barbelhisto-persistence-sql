@@ -5,4 +5,4 @@
 
 SQL DB integration listeners for [BarbelHisto](https://github.com/projectbarbel/barbelhisto-core).
 
-See the [project site](http://www.projectbarbel.org) for documentation.
+<under construction>
