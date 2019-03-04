@@ -3,7 +3,7 @@ addons:
   sonarcloud:
     organization: "projectbarbel" 
     token:
-      secure: H5ukGRvpbikcOGTXw+Ynn/+jeRMdluy/YfVnaMuiBHtHv2bAmrL7XhxdK/F1E5WtGWbI62Ab6zBUW3VA1CddFVZZgziORPbIHwXI2H5WtgjUxSDzFuTmnoALpDSQB6GhKrd7oD8igVyX4nwamk44bbJHW+ac6uZq84z4OMCfsHP85pQ1tDGteeMZwHaR6oR8vsBjbwaUjHyUEtHsE/0hLqrxwMC6F15wdyAkGdwRecFirHYWpHyLVCUZBXA5Q6rExN0VtvtKqR0QDL8HtO9YnhkZVD2l7MyzbEOxmuRQfydH3C317wguc5+laZDOwiZ22sfU5l2/2qS4V29I+b44POJjfAlLVSHzH1sFs03h/lDezO6CHQu4sIVanlh4LFfEADhubCBtLDQOmxG1ihPS7SkFHrOuEsolnx+qHU8sJn/kV2H6Ee3X6eUtD16zEFliZPQ9EiTaaPi/EciiODip8bTSEzIUq2swLI0c58HoanjfrauGwWDK9VuppfvaxgclrKd4O/tdsUMIPdGlJ0dbPfipL3JZMR5jGeKHjaUgulW4esLh6hDORT3tiXsV+CZinzsqzrzbj1PbgpIgZdN5FaRhya6aErkjBFlGbD7Inx5GFsFXkZ+SiD1BeWKFi1RCXLA+kNcafhLMdOZeX2qz1Gh+dDvQCYJ3RZkKGwnc8Pc=
+      secure: $SONAR_TOKEN
 before_install:
 - echo $GPG_SECRET_KEYS | base64 --decode | $GPG_EXECUTABLE --import
 - echo $GPG_OWNERTRUST | base64 --decode | $GPG_EXECUTABLE --import-ownertrust
@@ -20,11 +20,11 @@ deploy:
   api_key: $GITHUB_TOKEN
   skip_cleanup: true
   true:
-    repo: projectbarbel/barbelhisto-persistence-mongo
+    repo: projectbarbel/barbelhisto-persistence-sql
     tags: true
   overwrite: true
   file:
-      - target/barbelhisto-persistence-mongo-$project_version.jar
-      - target/barbelhisto-persistence-mongo-$project_version-sources.jar
-      - target/barbelhisto-persistence-mongo-$project_version-javadoc.jar
+      - target/barbelhisto-persistence-sql-$project_version.jar
+      - target/barbelhisto-persistence-sql-$project_version-sources.jar
+      - target/barbelhisto-persistence-sql-$project_version-javadoc.jar
   name: $project_version
