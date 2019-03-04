@@ -3,7 +3,7 @@ addons:
   sonarcloud:
     organization: "projectbarbel" 
     token:
-      secure: $SONAR_TOKEN
+      secure: vSY9fCiRd32bGB9CZvVtn7oyKIOqvVMJ7WNgj4bP9BIHnEQb5+gaPmxB2ea00XalEnCvEJ2XclDNmF25gDQ4wDKHWLlMR/5TBSmdMloQj7YCpOn2Vafy/TkLiu8wKBmvWm/GeSKXz28hJPKQn2wPsoprdkIGav6sRmNvFyWanCzJk2gjgpogbUQK+RmbLhyesGtuDmlnNIncfCen+py5AuFKDu7sWFVhJISalHQxtVET4E9hngqW80pAZcLYbZsKn8R3rxLRpCsQwnZaTRHujLJjBrW5HPvXr4Np2mIg4eJ8pn20gZGAqsWu73ASlTCvV9N6Fm7TKpi/DhhIAWDIFjB2OZ78FCsf0+feLTX+vuRv2rY0UPNtDjWXNeIzzfU1VJWaWjmWUVKDQLxGRAF1OiCatN3LZ7RccOrt63tRe9k2AlmebtbLqhqZtkLDPnshuT+zUcEBQK4ZyFzHJaYhp3jPalJhnWUNWsW5rzXl8HwgRJHZc7GY78eJ3W/hTlRHYLEeiBMfB4QX4KdRn78D65yJ+/dgIW/wpMd6TeczLtQdo6ARRjEhMBU2S0EaQMyWufaN1qHfgVpTP1MzWZfx044f8TSbpKkbvfAyjdhJC26rw5P1zFoxGd9O8SPt7tn75v62ugIk492n5PwpfNzbcoMlNawMEppqzMZ4Vij8Hlg=
 before_install:
 - echo $GPG_SECRET_KEYS | base64 --decode | $GPG_EXECUTABLE --import
 - echo $GPG_OWNERTRUST | base64 --decode | $GPG_EXECUTABLE --import-ownertrust
